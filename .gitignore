@@ -1,0 +1,11 @@
+*.jpg
+*.png
+*.svg
+*.jpeg
+*.img
+*.gif
+
+*.model
+*.sframe
+
+trainer/.venv
