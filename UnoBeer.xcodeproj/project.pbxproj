@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F21081792329975000EFCE3E /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F21081782329974F00EFCE3E /* MobileNetV2.mlmodel */; };
 		F263D8F5232857E90055FC79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F263D8F4232857E90055FC79 /* AppDelegate.swift */; };
 		F263D8F7232857E90055FC79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F263D8F6232857E90055FC79 /* ViewController.swift */; };
 		F263D8FA232857E90055FC79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F263D8F8232857E90055FC79 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F21081782329974F00EFCE3E /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		F263D8F1232857E90055FC79 /* UnoBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnoBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F263D8F4232857E90055FC79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F263D8F6232857E90055FC79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		F263D8F3232857E90055FC79 /* UnoBeer */ = {
 			isa = PBXGroup;
 			children = (
+				F21081782329974F00EFCE3E /* MobileNetV2.mlmodel */,
 				F263D8F4232857E90055FC79 /* AppDelegate.swift */,
 				F263D8F6232857E90055FC79 /* ViewController.swift */,
 				F263D8F8232857E90055FC79 /* Main.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21081792329975000EFCE3E /* MobileNetV2.mlmodel in Sources */,
 				F263D8F7232857E90055FC79 /* ViewController.swift in Sources */,
 				F263D8F5232857E90055FC79 /* AppDelegate.swift in Sources */,
 			);

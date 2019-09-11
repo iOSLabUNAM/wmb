@@ -79,6 +79,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         btnStart.isHidden = false
         btnStop.isEnabled = false
         
+        setInitialValues()
+        
         stopCameraCaptureSession()
     }
     
@@ -97,7 +99,30 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
+        guard let pixelBuffer : CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {return}
         
+        // ADD THE CORE ML MODEL HERE FOR REQUEST
+        guard let model = try? VNCoreMLModel(for: MobileNetV2().model) else {return}
+        
+        // CREATE THE REQUEST HANDLER
+        let request = VNCoreMLRequest(model: model) { (finishedRequest, err) in
+            
+            // HANDLE THE ERROR
+            
+            // LETS CAPTURE AND MAKE THE REQUEST
+            guard let results = finishedRequest.results as? [VNClassificationObservation] else {return}
+            guard let firstObservation = results.first else {return}
+            
+            let stringResult = "Result is: \(firstObservation.identifier)"
+            let stringConfidence = "Accuracy is: \(round(firstObservation.confidence*100))%"
+            
+            DispatchQueue.main.async {
+                self.lblResult.text = stringResult.uppercased()
+                self.lblAccuracy.text = stringConfidence.uppercased()
+            }
+        }
+        
+        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
         
     }
     
