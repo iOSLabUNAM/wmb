@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Irr-2I-R3N">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--What's my beer?-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UnoBeer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4qx-q5-v4z">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rfv-Qe-FGx" userLabel="vBody">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="594"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bs-Fw-Y7t">
+                                                <rect key="frame" x="144.5" y="234.5" width="125" height="125"/>
+                                                <state key="normal" image="wmb"/>
+                                                <connections>
+                                                    <action selector="btnStartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p24-yd-Noj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.91764705882352937" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="1bs-Fw-Y7t" firstAttribute="centerY" secondItem="Rfv-Qe-FGx" secondAttribute="centerY" id="033-gC-SBw"/>
+                                            <constraint firstItem="1bs-Fw-Y7t" firstAttribute="centerX" secondItem="Rfv-Qe-FGx" secondAttribute="centerX" id="i0E-8U-eZM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPK-IW-G8J" userLabel="vFooter">
+                                        <rect key="frame" x="0.0" y="594" width="414" height="180"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bp0-VD-Igs">
+                                                <rect key="frame" x="5" y="5" width="404" height="170"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNH-Tw-5tD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="82.5"/>
+                                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
+                                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ed-Mi-DFK">
+                                                        <rect key="frame" x="0.0" y="87.5" width="404" height="82.5"/>
+                                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
+                                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.08235294118" green="0.086274509799999996" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Bp0-VD-Igs" secondAttribute="trailing" constant="5" id="8aZ-Ab-wwp"/>
+                                            <constraint firstItem="Bp0-VD-Igs" firstAttribute="leading" secondItem="NPK-IW-G8J" secondAttribute="leading" constant="5" id="Gfd-rf-cRV"/>
+                                            <constraint firstAttribute="height" constant="180" id="Pgq-kS-a9N"/>
+                                            <constraint firstItem="Bp0-VD-Igs" firstAttribute="top" secondItem="NPK-IW-G8J" secondAttribute="top" constant="5" id="iMR-sX-b6m"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bp0-VD-Igs" secondAttribute="bottom" constant="5" id="l5n-H7-fgo"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="NPK-IW-G8J" secondAttribute="bottom" id="e8K-xT-ybR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.08235294118" green="0.086274509799999996" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4qx-q5-v4z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9ly-bJ-zTa"/>
+                            <constraint firstItem="4qx-q5-v4z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ChR-dF-K4W"/>
+                            <constraint firstItem="4qx-q5-v4z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MlQ-yA-7In"/>
+                            <constraint firstItem="4qx-q5-v4z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mr3-Z5-aXQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="What's my beer?" id="JsH-Te-ejR">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="stop" id="CCS-t2-AwH">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="btnStopPressed:" destination="BYZ-38-t0r" id="Q82-me-QZ2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnStart" destination="1bs-Fw-Y7t" id="z49-3b-kZs"/>
+                        <outlet property="btnStop" destination="CCS-t2-AwH" id="zhd-cp-N9J"/>
+                        <outlet property="lblAccuracy" destination="0Ed-Mi-DFK" id="I5S-cQ-Zb5"/>
+                        <outlet property="lblResult" destination="TNH-Tw-5tD" id="8tO-To-H9c"/>
+                        <outlet property="vBody" destination="Rfv-Qe-FGx" id="Qhs-ut-0xV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7qo-gf-DcH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Irr-2I-R3N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HY3-dg-e3p">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.086274509799999996" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.16078431369999999" green="0.17254901959999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.08235294118" green="0.086274509799999996" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SPS-Bp-qwl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJM-NW-Lpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wmb" width="125" height="125"/>
+    </resources>
 </document>
