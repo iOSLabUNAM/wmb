@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4qx-q5-v4z">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rfv-Qe-FGx" userLabel="vBody">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="594"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="542"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bs-Fw-Y7t">
-                                                <rect key="frame" x="144.5" y="234.5" width="125" height="125"/>
+                                                <rect key="frame" x="144.5" y="208.5" width="125" height="125"/>
                                                 <state key="normal" image="wmb"/>
                                                 <connections>
                                                     <action selector="btnStartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p24-yd-Noj"/>
@@ -39,7 +39,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPK-IW-G8J" userLabel="vFooter">
-                                        <rect key="frame" x="0.0" y="594" width="414" height="180"/>
+                                        <rect key="frame" x="0.0" y="542" width="414" height="180"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bp0-VD-Igs">
                                                 <rect key="frame" x="5" y="5" width="404" height="170"/>
@@ -108,8 +108,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Irr-2I-R3N" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HY3-dg-e3p">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="HY3-dg-e3p">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.08235294118" green="0.086274509799999996" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.16078431369999999" green="0.17254901959999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
