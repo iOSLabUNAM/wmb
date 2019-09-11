@@ -33,8 +33,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     func initController(){
         // 1.- Initializing status
         setInitialValues()
-        // textToSpeech(text: "How are you Aciel?")
-        
     }
     
     func setInitialValues(){
@@ -113,19 +111,21 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             guard let results = finishedRequest.results as? [VNClassificationObservation] else {return}
             guard let firstObservation = results.first else {return}
             
+            let confidence = firstObservation.confidence*100
+            
             let stringResult = "Result is: \(firstObservation.identifier)"
-            let stringConfidence = "Accuracy is: \(round(firstObservation.confidence*100))%"
+            let stringConfidence = "Accuracy is: \(round(confidence))%"
             
             DispatchQueue.main.async {
                 self.lblResult.text = stringResult.uppercased()
                 self.lblAccuracy.text = stringConfidence.uppercased()
+                
+                if(confidence > 98) {
+                    self.textToSpeech(text: stringResult)
+                }
             }
         }
         
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
-        
     }
-    
 }
-
-    
